@@ -1,0 +1,91 @@
+class Solution {
+public:
+    string originalDigits(string s) {
+        
+        map<char,int> m;
+        for(char c: s)
+            m[c]++;
+        string ans="";
+        while(m['g'])
+        {
+            ans+='8';
+            m['e']--;
+            m['i']--;
+            m['g']--;
+            m['h']--;
+            m['t']--;
+        }
+        while(m['w'])
+        {
+            ans+='2';
+            m['t']--;
+            m['w']--;
+            m['o']--;
+        }
+        while(m['z'])
+        {
+            ans+='0';
+            m['z']--;
+            m['e']--;
+            m['r']--;
+            m['o']--;
+        }
+        while(m['x'])
+        {
+            ans+='6';
+            m['s']--;
+            m['i']--;
+            m['x']--;
+        }
+        while(m['h'])
+        {
+            ans+='3';
+            m['t']--;
+            m['h']--;
+            m['r']--;
+            m['e']-=2;
+        }
+        while(m['u'])
+        {
+            ans+='4';
+            m['f']--;
+            m['o']--;
+            m['u']--;
+            m['r']--;
+        }
+        while(m['o'])
+        {
+            ans+='1';
+            m['o']--;
+            m['n']--;
+            m['e']--;
+        }
+        while(m['f'])
+        {
+            ans+='5';
+            m['f']--;
+            m['i']--;
+            m['v']--;
+            m['e']--;
+        }
+        while(m['s'])
+        {
+            ans+='7';
+            m['s']--;
+            m['e']-=2;
+            m['v']--;
+            m['n']--;
+        }
+        while(m['n'])
+        {
+            ans+='9';
+            m['n']--;
+            m['i']--;
+            m['n']--;
+            m['e']--;
+        }
+        
+        sort(ans.begin(),ans.end());
+        return ans;
+    }
+};
